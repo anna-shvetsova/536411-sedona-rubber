@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона - гостиницы</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <a href="index.html">
+                    <img src=# alt="Логотип">
+                </a>
+                <ul>
+                    <li>
+                        <a href=#>Информация</a>
+                    </li>
+                    <li>
+                        <a href=#>Фото и видео</a>
+                    </li>
+                    <li>
+                        <a href=#>Карта штата</a>
+                    </li>
+                    <li>
+                        <a href=#>Гостиницы</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="filter">
+                <form action=# method="POST" title="Фильтр">
+                    <fieldset class="facilities">
+                        <legend>Инфраструктура:</legend>
+                        <ul>
+                            <li>
+                                <label><input type="checkbox" name="pool" id="pool" value="true">Бассейн</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" name="parking" id="parking">Парковка</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" name="wifi" id="wifi">Wi-Fi</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="types-accomodation">
+                        <legend>Тип жилья:</legend>
+                        <ul>
+                            <li>
+                                <label><input type="checkbox" name="hotel" id="hotel" value="true">Гостиница</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" name="motel" id="motel">Мотель</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" name="apartment" id="apartment">Апартаменты</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="range-price">
+                        <legend>Стоимость в сутки (р):</legend>
+                        <input type="range" name="range-price" id="range-price" min="0" max="10000" step="100">
+                    </fieldset>
+                    <button type="submit" name="show" id="show" formtarget="_blank">Показать</button>
+                </form>
+            </section>
+            <section class="hotels-found">
+                <section class="controls">
+                    <p>Найдено: 3</p>
+                    <fieldset class="sort">
+                        <legend>Сортировка</legend>
+                        <ul class="type">
+                            <li>
+                                <button type="button" name="by-price" id="by-price">По цене</button>
+                            </li>
+                            <li>
+                                <button type="button" name="by-type" id="by-type">По типу</button>
+                            </li>
+                            <li>
+                                <button type="button" name="by-rate" id="by-rate">По рейтингу</button>
+                            </li>
+                        </ul>
+                        <ul class="direction">
+                            <li>
+                                <button type="button" name="up" id="up">По возрастанию</button>
+                            </li>
+                            <li>
+                                <button type="button" name="down" id="down">По убыванию</button>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </section>
+                <section class="hotels">
+                    <ul>
+                        <li>
+                            <section class="hotel">
+                                <img src=# alt="Картинка отеля">
+                                <div>
+                                    <h2>Amara resort & spa</h2>
+                                    <p><output name="type-acomodation" id="type-acomodation">Гостиница</output></p>
+                                    <p>от <output name="price" id="price">4000</output> р.</p>
+                                    <button class="more" type="submit" name="more" id="more" formtarget="_blank">Подробнее</button>
+                                    <button class="book" type="submit" name="book" id="book" formtarget="_blank">Забронировать</button>
+                                </div>
+                                <div>
+                                    <div class="stars">****</div>
+                                    <p>Рейтинг: <output name="rate" id="rate">8,5</output></p>
+                                </div>
+                            </section>
+                        </li>
+                        <li>
+                            <section class="hotel">
+                                <img src=# alt="Картинка отеля">
+                                <div>
+                                    <h2>Desert quail inn</h2>
+                                    <p><output>Мотель</output></p>
+                                    <p>от <output>3000</output> р.</p>
+                                    <button class="more" type="submit" formtarget="_blank">Подробнее</button>
+                                    <button class="book" type="submit" formtarget="_blank">Забронировать</button>
+                                </div>
+                                <div>
+                                    <div class="stars">***</div>
+                                    <p>Рейтинг: <output>8,9</output></p>
+                                </div>
+                            </section>
+                        </li>
+                        <li>
+                            <section class="hotel">
+                                <img src=# alt="Картинка отеля">
+                                <div>
+                                    <h2>Amara resort & spa</h2>
+                                    <p><output>Апартаменты</output></p>
+                                    <p>от <output>2000</output> р.</p>
+                                    <button class="more" type="submit" formtarget="_blank">Подробнее</button>
+                                    <button class="book" type="submit" formtarget="_blank">Забронировать</button>
+                                </div>
+                                <div>
+                                    <div class="stars">**</div>
+                                    <p>Рейтинг: <output>9,2</output></p>
+                                </div>
+                            </section>
+                        </li>
+                    </ul>
+                </section> 
+            </section>
+        </main>
+        <footer>
+
+            <div class="hashtag">
+                <b>#VISITSEDONA</b>
+            </div>
+            <div class="socials">
+                <ul>
+                    <li>
+                        <a class="social social-tw" href=#>Twitter</a>
+                    </li>
+                    <li>
+                        <a class="social social-fb" href=#>Facebook</a>
+                    </li>
+                    <li>
+                        <a class="social social-xx" href=#>XX</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="created-by">
+                <p>WebsiteBy
+                    <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+                </p>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
