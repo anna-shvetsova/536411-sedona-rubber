@@ -9,7 +9,7 @@
 <body>
     <div class="wrapper">
         <header>
-            <nav>
+            <nav class="top-menu">
                 <a href="index.html">
                     <img src=# alt="Логотип">
                 </a>
@@ -23,75 +23,82 @@
                     <li>
                         <a href=#>Карта штата</a>
                     </li>
-                    <li>
+                    <li class="top-menu-current">
                         <a href=#>Гостиницы</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section class="filter">
-                <form action=# method="POST" title="Фильтр">
-                    <fieldset class="facilities">
-                        <legend>Инфраструктура:</legend>
-                        <ul>
-                            <li>
-                                <label><input type="checkbox" name="pool" id="pool" value="true">Бассейн</label>
-                            </li>
-                            <li>
-                                <label><input type="checkbox" name="parking" id="parking">Парковка</label>
-                            </li>
-                            <li>
-                                <label><input type="checkbox" name="wifi" id="wifi">Wi-Fi</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-                    <fieldset class="types-accomodation">
-                        <legend>Тип жилья:</legend>
-                        <ul>
-                            <li>
-                                <label><input type="checkbox" name="hotel" id="hotel" value="true">Гостиница</label>
-                            </li>
-                            <li>
-                                <label><input type="checkbox" name="motel" id="motel">Мотель</label>
-                            </li>
-                            <li>
-                                <label><input type="checkbox" name="apartment" id="apartment">Апартаменты</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-                    <fieldset class="range-price">
-                        <legend>Стоимость в сутки (р):</legend>
-                        <input type="range" name="range-price" id="range-price" min="0" max="10000" step="100">
-                    </fieldset>
-                    <button type="submit" name="show" id="show" formtarget="_blank">Показать</button>
-                </form>
-            </section>
+            <form action=# method="POST" title="Фильтр">
+                <fieldset class="facilities">
+                    <legend>Инфраструктура:</legend>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="pool" id="pool" checked>Бассейн</label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="parking" id="parking">Парковка</label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="wifi" id="wifi">Wi-Fi</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="types-accomodation">
+                    <legend>Тип жилья:</legend>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="hotel" id="hotel" checked>Гостиница</label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="motel" id="motel" checked>Мотель</label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="apartment" id="apartment" checked>Апартаменты</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="range-price">
+                    <legend>Стоимость в сутки (р):</legend>
+                    <label>От:
+                        <input type="text" name="price-from" id="price-from" value="0">
+                    </label>
+                    <label>до:
+                        <input type="text" name="price-to" id="price-to" value="3000">
+                    </label>
+                </fieldset>
+                <button type="submit" name="show" id="show" formtarget="_blank">Показать</button>
+            </form>
             <section class="hotels-found">
                 <section class="controls">
                     <p>Найдено: 3</p>
-                    <fieldset class="sort">
-                        <legend>Сортировка</legend>
-                        <ul class="type">
-                            <li>
-                                <button type="button" name="by-price" id="by-price">По цене</button>
-                            </li>
-                            <li>
-                                <button type="button" name="by-type" id="by-type">По типу</button>
-                            </li>
-                            <li>
-                                <button type="button" name="by-rate" id="by-rate">По рейтингу</button>
-                            </li>
-                        </ul>
-                        <ul class="direction">
-                            <li>
-                                <button type="button" name="up" id="up">По возрастанию</button>
-                            </li>
-                            <li>
-                                <button type="button" name="down" id="down">По убыванию</button>
-                            </li>
-                        </ul>
-                    </fieldset>
+                    <p>Сортировка:</p>
+                    <ul class="sort-type">
+                        <li class="by-price sort-type-current">
+                            <a href=#>По цене</a>
+                        </li>
+                        <li class="by-type">
+                            <a href=#>По типу</a>
+                        </li>
+                        <li class="by-rate">
+                            <a href=#>По рейтингу</a>
+                        </li>
+                    </ul>
+                    <ul class="sort-direction">
+                        <li class="up">
+                            <a href=#>По возрастанию</a>
+                        </li>
+                        <li class="down sort-direction-current">
+                            <a href=#>По убыванию</a>
+                        </li>
+                    </ul>
                 </section>
                 <section class="hotels">
                     <ul>
@@ -100,14 +107,19 @@
                                 <img src=# alt="Картинка отеля">
                                 <div>
                                     <h2>Amara resort & spa</h2>
-                                    <p><output name="type-acomodation" id="type-acomodation">Гостиница</output></p>
-                                    <p>от <output name="price" id="price">4000</output> р.</p>
-                                    <button class="more" type="submit" name="more" id="more" formtarget="_blank">Подробнее</button>
-                                    <button class="book" type="submit" name="book" id="book" formtarget="_blank">Забронировать</button>
+                                    <p>
+                                        <output name="type-acomodation" id="type-acomodation">Гостиница</output>
+                                    </p>
+                                    <p>от
+                                        <output name="price" id="price">4000</output> р.</p>
+                                    <a class="button" href=#>Подробнее</a>
+                                    <a class="button" href=#>Забронировать</a>
                                 </div>
                                 <div>
                                     <div class="stars">****</div>
-                                    <p>Рейтинг: <output name="rate" id="rate">8,5</output></p>
+                                    <p>Рейтинг:
+                                        <output name="rate" id="rate">8,5</output>
+                                    </p>
                                 </div>
                             </section>
                         </li>
@@ -116,14 +128,19 @@
                                 <img src=# alt="Картинка отеля">
                                 <div>
                                     <h2>Desert quail inn</h2>
-                                    <p><output>Мотель</output></p>
-                                    <p>от <output>3000</output> р.</p>
-                                    <button class="more" type="submit" formtarget="_blank">Подробнее</button>
-                                    <button class="book" type="submit" formtarget="_blank">Забронировать</button>
+                                    <p>
+                                        <output>Мотель</output>
+                                    </p>
+                                    <p>от
+                                        <output>3000</output> р.</p>
+                                    <a class="button" href=#>Подробнее</a>
+                                    <a class="button" href=#>Забронировать</a>
                                 </div>
                                 <div>
                                     <div class="stars">***</div>
-                                    <p>Рейтинг: <output>8,9</output></p>
+                                    <p>Рейтинг:
+                                        <output>8,9</output>
+                                    </p>
                                 </div>
                             </section>
                         </li>
@@ -132,19 +149,24 @@
                                 <img src=# alt="Картинка отеля">
                                 <div>
                                     <h2>Amara resort & spa</h2>
-                                    <p><output>Апартаменты</output></p>
-                                    <p>от <output>2000</output> р.</p>
-                                    <button class="more" type="submit" formtarget="_blank">Подробнее</button>
-                                    <button class="book" type="submit" formtarget="_blank">Забронировать</button>
+                                    <p>
+                                        <output>Апартаменты</output>
+                                    </p>
+                                    <p>от
+                                        <output>2000</output> р.</p>
+                                    <a class="button" href=#>Подробнее</a>
+                                    <a class="button" href=#>Забронировать</a>
                                 </div>
                                 <div>
                                     <div class="stars">**</div>
-                                    <p>Рейтинг: <output>9,2</output></p>
+                                    <p>Рейтинг:
+                                        <output>9,2</output>
+                                    </p>
                                 </div>
                             </section>
                         </li>
                     </ul>
-                </section> 
+                </section>
             </section>
         </main>
         <footer>
@@ -161,7 +183,7 @@
                         <a class="social social-fb" href=#>Facebook</a>
                     </li>
                     <li>
-                        <a class="social social-xx" href=#>XX</a>
+                        <a class="social social-youtube" href=#>YouTube</a>
                     </li>
                 </ul>
             </div>
