@@ -1,13 +1,16 @@
 .picture {
-    width: 800;
+    width: 800px;
     height: 260px;
     overflow: hidden;
-/*    background: black;
-*/
 }
 
 .picture img{
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    top: -78px;
+}
+
+.picture-map {
+    width: 1200px;
+    height: 473px;
+    overflow: hidden;
 }
