@@ -271,7 +271,8 @@ a:active {
     color: #b2b2b2;
 }
 
-.hotels-found .sort-direction a:hover {
+.hotels-found .sort-direction a:hover,
+.hotels-found .sort-direction a:focus {
     color: #000000;
 }
 
