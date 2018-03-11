@@ -280,8 +280,6 @@ a:active {
     color: #81b3d2;
 }
 
-
-
 .hotels .hotel .rate {
     width: 110px;
     height: 27px;
@@ -291,46 +289,48 @@ a:active {
 
 .social {
     display: inline-block;
+    position: relative;
     
     width: 46px;
     height: 48px;
-
-    background-repeat: no-repeat;
 }
 
-
-.social-tw {
-    background-image: url('../img/twitter.svg');
-    background-position: 15px 15px;
+.social .svg-icon {
+    fill: #ffffff;
 }
 
-.social-tw:active {
-    background-image: url('../img/twitter-active.svg');
+.social:active .svg-icon {
+    fill: #88b6d1;
 }
 
-.social-fb {
-    background-image: url('../img/fb-icon.svg');
-    background-position: 15px 15px;
-}
-
-.social-fb:active {
-    background-image: url('../img/fb-icon-active.svg');
-}
-
-.social-youtube {
-    background-image: url('../img/youtube.svg');
-    background-position: 13px 15px;
-}
-
-.social-youtube:active {
-    background-image: url('../img/youtube-active.svg');
+.created-by a {
+    vertical-align: middle;
 }
 
 .htmlacademy {
     display: inline-block;
+    position: relative;
 
     width: 115px;
     height: 41px;
+}
 
-    background-image: url('../img/logo-htmlacademy.svg');
+.htmlacademy .svg-icon {
+    fill: #231f20;
+}
+
+.htmlacademy:hover .svg-icon,
+.htmlacademy:focus .svg-icon {
+    fill: #98c1da;
+}
+
+.htmlacademy:active .svg-icon {
+    fill: #bdbbbc;
+}
+
+.svg-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
