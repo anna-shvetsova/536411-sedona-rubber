@@ -13,7 +13,7 @@
   <div class="wrapper">
     <header>
       <a>
-        <img src="img/logo.png" width="138" height="70" alt="Логотип">
+        <img src="img/logo.png" width="138" height="70" alt="Логотип Седоны">
       </a>
       <nav class="top-menu">
         <ul>
@@ -47,11 +47,11 @@
           <p>Седона &ndash; не аттракцион для туристов, там течет своя жизнь</p>
         </div>
         <div class="picture">
-          <img src="img/feature-1.jpg" width="800" height="401" alt="Картинка города">
+          <img src="img/feature-1.jpg" width="800" height="401" alt="Фото города">
         </div>
       </section>
 
-      <ul class="suggestions">
+      <ul class="suggestions" aria-label="Наши советы">
         <li class="accomodation">
           <h2>Жилье</h2>
           <p>Рекомендуем пожить в настоящем отеле, все как в кино!</p>
@@ -73,25 +73,27 @@
           <p>Да, по нему можно пройти, если, конечно, вы осмелитесь</p>
         </div>
         <div class="picture">
-          <img src="img/feature-2.jpg" width="800" height="400" alt="Картинка окрестностей">
+          <img src="img/feature-2.jpg" width="800" height="400" alt="Фото окрестностей">
         </div>
       </section>
 
-      <div class="feature">
-        <h2>Небольшая площадь</h2>
-        <p>&ndash; №3 &ndash;</p>
-        <p>Все достопримечательности находятся очень близко</p>
-      </div>
-      <div class="feature">
-        <h2>Красивая дорога</h2>
-        <p>&ndash; №4 &ndash;</p>
-        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-      </div>
-      <div class="feature">
-        <h2>Мало туристов</h2>
-        <p>&ndash; №5 &ndash;</p>
-        <p>Большинство едет в Гранд Каньон и толпится там</p>
-      </div>
+      <section class="features-container">
+        <div class="feature">
+          <h2>Небольшая площадь</h2>
+          <p>&ndash; №3 &ndash;</p>
+          <p>Все достопримечательности находятся очень близко</p>
+        </div>
+        <div class="feature">
+          <h2>Красивая дорога</h2>
+          <p>&ndash; №4 &ndash;</p>
+          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+        <div class="feature">
+          <h2>Мало туристов</h2>
+          <p>&ndash; №5 &ndash;</p>
+          <p>Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
+      </section>
 
       <section class="search-hotel">
         <p>
@@ -99,27 +101,28 @@
         </p>
         <p>Укажите предполагаемые даты поездки,
           <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-
-        <!--
-        <form action="" method="POST" title="Поиск гостиницы в Седоне">
-          <div>
-            <label for="date-checkin">Дата заезда:</label>
-            <input type="date" name="date-checkin" id="date-checkin">
-          </div>
-          <div>
-            <label for="date-checkout">Дата выезда:</label>
-            <input type="date" name="date-checkout" id="date-checkout">
-          </div>
-          <div>
-            <label for="number-adults">Взрослые:</label>
-            <input type="number" name="number-adults" id="number-adults" min="1" value="2">
-            <label for="number-children">Дети:</label>
-            <input type="number" name="number-children" id="number-children" min="0" value="0">
-          </div>
-          <button type="submit">Найти</button>
-        </form>
-        -->
+        <button class="button button-brown" type="button">Поиск гостиницы в Седоне</button>
       </section>
+
+      <form class="form-search-hotel" action=# method="POST" title="Поиск гостиницы в Седоне">
+        <div>
+          <label for="date-checkin">Дата заезда:</label>
+          <input type="date" name="date-checkin" id="date-checkin">
+        </div>
+        <div>
+          <label for="date-checkout">Дата выезда:</label>
+          <input type="date" name="date-checkout" id="date-checkout">
+        </div>
+        <div>
+          <label for="number-adults">Взрослые:</label>
+          <input type="number" name="number-adults" id="number-adults" min="1" value="2">
+        </div>
+        <div>
+          <label for="number-children">Дети:</label>
+          <input type="number" name="number-children" id="number-children" min="0" value="0">
+        </div>
+        <button class="button button-blue" type="submit">Найти</button>
+      </form>
 
       <section class="picture-map">
         <img src="img/map.png" width="1200" height="593" alt="Большая карта">
@@ -135,19 +138,20 @@
       <div class="socials">
         <ul>
           <li>
-            <a class="social social-tw" href=#>Twitter</a>
+            <a class="social social-tw button-blue" href=# aria-label="Twitter">
+            </a>
           </li>
           <li>
-            <a class="social social-fb" href=#>Facebook</a>
+            <a class="social social-fb button-blue" href=# aria-label="Facebook"></a>
           </li>
           <li>
-            <a class="social social-youtube" href=#>YouTube</a>
+            <a class="social social-youtube button-blue" href=# aria-label="YouTube"></a>
           </li>
         </ul>
       </div>
       <div class="created-by">
         <p>WebsiteBy
-          <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+          <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"></a>
         </p>
       </div>
 

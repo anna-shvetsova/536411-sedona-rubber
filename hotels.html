@@ -6,7 +6,7 @@
     <title>HTML Academy: Седона - гостиницы</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <header>
             <nav class="top-menu">
                 <a href="index.html">
-                    <img src="img/logo.png" width="138" height="70" alt="Логотип">
+                    <img src="img/logo.png" width="138" height="70" alt="Логотип Седоны">
                 </a>
                 <ul>
                     <li>
@@ -33,22 +33,22 @@
             </nav>
         </header>
         <main>
-            <h1 class="hidden">Гостиницы</h1>
-            <form action=# method="POST" title="Фильтр">
+            <h1 class="visually-hidden">Гостиницы</h1>
+            <form class="filter" action=# method="POST" title="Фильтр">
                 <fieldset class="facilities">
                     <legend>Инфраструктура:</legend>
                     <ul>
                         <li>
-                            <label>
-                                <input type="checkbox" name="pool" id="pool" checked>Бассейн</label>
+                            <input class="checkbox" type="checkbox" name="pool" id="pool" checked>
+                            <label for="pool">Бассейн</label>
                         </li>
                         <li>
-                            <label>
-                                <input type="checkbox" name="parking" id="parking">Парковка</label>
+                            <input class="checkbox" type="checkbox" name="parking" id="parking">
+                            <label for="parking">Парковка</label>
                         </li>
                         <li>
-                            <label>
-                                <input type="checkbox" name="wifi" id="wifi">Wi-Fi</label>
+                            <input class="checkbox" type="checkbox" name="wifi" id="wifi">
+                            <label for="wifi">Wi-Fi</label>
                         </li>
                     </ul>
                 </fieldset>
@@ -56,16 +56,16 @@
                     <legend>Тип жилья:</legend>
                     <ul>
                         <li>
-                            <label>
-                                <input type="checkbox" name="hotel" id="hotel" checked>Гостиница</label>
+                            <input class="checkbox" type="checkbox" name="hotel" id="hotel" checked>
+                            <label for="hotel">Гостиница</label>
                         </li>
                         <li>
-                            <label>
-                                <input type="checkbox" name="motel" id="motel" checked>Мотель</label>
+                            <input class="checkbox" type="checkbox" name="motel" id="motel" checked>
+                            <label for="motel">Мотель</label>
                         </li>
                         <li>
-                            <label>
-                                <input type="checkbox" name="apartment" id="apartment" checked>Апартаменты</label>
+                            <input class="checkbox" type="checkbox" name="apartment" id="apartment" checked>
+                            <label for="apartment">Апартаменты</label>
                         </li>
                     </ul>
                 </fieldset>
@@ -78,12 +78,12 @@
                         <input type="text" name="price-to" id="price-to" value="3000">
                     </label>
                 </fieldset>
-                <button type="submit" name="show" id="show" formtarget="_blank">Показать</button>
+                <button class="button" type="submit" id="show" formtarget="_blank">Показать</button>
             </form>
             <section class="hotels-found">
                 <h2>Найдено: 3</h2>
                 <p>Сортировка:</p>
-                <ul class="sort-type">
+                <ul class="sort-type" aria-label="Категория сортировки">
                     <li class="by-price sort-type-current">
                         <a href=#>По цене</a>
                     </li>
@@ -94,12 +94,12 @@
                         <a href=#>По рейтингу</a>
                     </li>
                 </ul>
-                <ul class="sort-direction">
+                <ul class="sort-direction" aria-label="Направление сортировки">
                     <li class="up">
-                        <a href=#>По возрастанию</a>
+                        <a href=# aria-label="По возрастанию">&#9650;</a>
                     </li>
                     <li class="down sort-direction-current">
-                        <a href=#>По убыванию</a>
+                        <a href=# aria-label="По убыванию">&#9660;</a>
                     </li>
                 </ul>
                 <section class="hotels">
@@ -112,11 +112,11 @@
                                 </h2>
                                 <p>Гостиница</p>
                                 <p>от 4000 р.</p>
-                                <a class="button" href=#>Подробнее</a>
-                                <a class="button" href=#>Забронировать</a>
+                                <a class="button button-blue" href=#>Подробнее</a>
+                                <a class="button button-brown" href=#>Забронировать</a>
                             </div>
                             <div>
-                                <div class="stars">****</div>
+                                <div class="stars" aria-label="Четыре звезды">****</div>
                                 <p class="rate">Рейтинг: 8,5</p>
                             </div>
                         </li>
@@ -128,11 +128,11 @@
                                 </h2>
                                 <p>Мотель</p>
                                 <p>от 3000 р.</p>
-                                <a class="button" href=#>Подробнее</a>
-                                <a class="button" href=#>Забронировать</a>
+                                <a class="button button-blue" href=#>Подробнее</a>
+                                <a class="button button-brown" href=#>Забронировать</a>
                             </div>
                             <div>
-                                <div class="stars">***</div>
+                                <div class="stars" aria-label="Три звезды">***</div>
                                 <p class="rate">Рейтинг: 8,9</p>
                             </div>
                         </li>
@@ -144,11 +144,11 @@
                                 </h2>
                                 <p>Апартаменты</p>
                                 <p>от 2000 р.</p>
-                                <a class="button" href=#>Подробнее</a>
-                                <a class="button" href=#>Забронировать</a>
+                                <a class="button button-blue" href=#>Подробнее</a>
+                                <a class="button button-brown" href=#>Забронировать</a>
                             </div>
                             <div>
-                                <div class="stars">**</div>
+                                <div class="stars" aria-label="Две звезды">**</div>
                                 <p class="rate">Рейтинг: 9,2</p>
                             </div>
                         </li>
@@ -164,19 +164,19 @@
             <div class="socials">
                 <ul>
                     <li>
-                        <a class="social social-tw" href=#>Twitter</a>
+                        <a class="social social-tw button-blue" href=# aria-label="Twitter"></a>
                     </li>
                     <li>
-                        <a class="social social-fb" href=#>Facebook</a>
+                        <a class="social social-fb button-blue" href=# aria-label="Facebook"></a>
                     </li>
                     <li>
-                        <a class="social social-youtube" href=#>YouTube</a>
+                        <a class="social social-youtube button-blue" href=# aria-label="YouTube"></a>
                     </li>
                 </ul>
             </div>
             <div class="created-by">
                 <p>WebsiteBy
-                    <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+                    <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"></a>
                 </p>
             </div>
 
