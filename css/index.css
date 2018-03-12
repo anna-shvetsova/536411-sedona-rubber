@@ -11,8 +11,10 @@ body {
 */
 }
 
-body, button {
+body, button, input {
     text-transform: uppercase;
+    border: none;
+    box-sizing: border-box;
 }
 
 body li {
@@ -50,7 +52,6 @@ a:active {
 .top-menu-current a {
     color: #766357;    
 }
-
 
 .intro .picture-big {
     height: 510px;
@@ -155,6 +156,58 @@ a:active {
     line-height: 1,238;
 }
 
+.form-search-hotel {
+    font-weight: bold;
+    padding: 55px;
+}
+
+.form-search-hotel .area {
+    padding-bottom: 30px;
+}
+
+.form-search-hotel input,
+.form-search-hotel .calendar,
+.form-search-hotel .incr,
+.form-search-hotel .decr {
+
+    height: 38px;
+    vertical-align: middle;
+
+    font-weight: bold;
+    
+    background-color: #f2f2f2;
+}
+
+.form-search-hotel .calendar,
+.form-search-hotel .incr,
+.form-search-hotel .decr {
+    width: 38px;
+    color: #a9a9a9;
+}
+
+.form-search-hotel .date {
+    width: 308px;
+    padding-left: 10px;
+}
+
+.form-search-hotel .number {
+    width: 38px;
+    margin-left: -4px;    
+    text-align: center;
+}
+
+.form-search-hotel .calendar {
+    margin-left: -4px;
+
+    background-image: url("../img/calendar.svg");
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+.form-search-hotel .incr {
+    margin-left: -4px;
+}
+
 .form-search-hotel .button {
     width: 458px;
     height: 58px;
@@ -184,6 +237,7 @@ a:active {
     font-weight: normal;
 
     background-color: transparent;
+    border: 2px solid #ffffff;
 }
 
 .filter .button:hover,
@@ -192,7 +246,6 @@ a:active {
     color: #000000;
     background-color: #ffffff;
 }
-
 
 .filter .checkbox {
 /*    display: none;*/
@@ -281,11 +334,21 @@ a:active {
     color: #81b3d2;
 }
 
-.hotels .hotel .rate {
+.hotel .rate {
     width: 110px;
     height: 27px;
 
     background-color: #eeeeee;
+}
+
+.hotel .stars {
+    font-size: 24px;
+    color: #81b3d2;
+}
+
+.hotel .rate {
+    text-align: center;
+    vertical-align: middle;
 }
 
 .social {

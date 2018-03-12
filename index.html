@@ -94,8 +94,7 @@
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </div>
       </section>
-
-      <section class="search-hotel">
+  <section class="search-hotel">
         <p>
           <b>Заинтересовались?</b>
         </p>
@@ -105,21 +104,27 @@
       </section>
 
       <form class="form-search-hotel" action=# method="POST">
-        <div>
+        <div class="area area-date">
           <label for="date-checkin">Дата заезда:</label>
-          <input type="text" name="date-checkin" id="date-checkin">
+          <input class="date" type="text" name="date-checkin" id="date-checkin" value="24 апреля 2017">
+          <button class="calendar" type="button"></button>
         </div>
-        <div>
+        <div class="area area-date">
           <label for="date-checkout">Дата выезда:</label>
-          <input type="text" name="date-checkout" id="date-checkout">
+          <input class="date" type="text" name="date-checkout" id="date-checkout" value="24 июля 2017">
+          <button class="calendar" type="button"></button>
         </div>
-        <div>
+        <div class="area area-number">
           <label for="number-adults">Взрослые:</label>
-          <input type="text" name="number-adults" id="number-adults" min="1" value="2">
+          <button class="decr" type="button">&mdash;</button>
+          <input class="number" type="text" name="number-adults" id="number-adults" min="1" value="2">
+          <button class="incr" type="button">&#10010;</button>
         </div>
-        <div>
+        <div class="area area-number">
           <label for="number-children">Дети:</label>
-          <input type="text" name="number-children" id="number-children" min="0" value="0">
+          <button class="decr" type="button">&mdash;</button>
+          <input class="number" type="text" name="number-children" id="number-children" min="0" value="0">
+          <button class="incr" type="button">&#10010;</button>
         </div>
         <button class="button button-blue" type="submit">Найти</button>
       </form>
