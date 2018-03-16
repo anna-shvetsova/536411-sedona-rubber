@@ -9,29 +9,20 @@ html {
 }
 
 body {
-    width: 1280px;
-    margin: 0;
     padding: 0;
 
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 14px;
-    line-height: 26px;
+    line-height: 21px;
     text-transform: uppercase;
     color: #333333;
 
     background-color:#f2f2f2;
 }
 
-body h1,
-body h2,
-body h3 {
-    font-size: 21px;
-    line-height: 26px;
-    text-align: center;
-    color: #000000;
-}
 
 a {
+    line-height: 26px;
     text-decoration: none;
     color: #000000;
 }
@@ -46,14 +37,26 @@ a:active {
     color: #b2b2b2;
 }  
 
-.visually-hidden {
+.header-hidden {
     display: none;
 }
 
-.button {
-    box-sizing: border-box;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
-    font-size: 14px;
+.button {
     font-weight: bold;
     text-transform: uppercase;
 
@@ -97,14 +100,25 @@ a:active {
 }
 
 .wrapper {
-    margin-left: 40px;
-    margin-right: 40px;
-
-    display: flex;
-    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
 
     background-color: #ffffff;
     box-shadow: 0 0 10px 5px #dbdbdb;
+}
+
+.main-index h1,
+.main-index h2,
+.main-index h3 {
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;
+}
+
+.main-index .button {
+    font-size: 21px;
+    line-height: 26px;
 }
 
 .top-menu {
@@ -167,10 +181,14 @@ a:active {
     margin: auto;
 }
 
-.reasons-to-go p {
+.reasons-to-go  {
     text-align: center;
  /*   border: 1px solid black;
     */
+}
+
+.reasons-to-go .subheader {
+    line-height: 26px;
 }
 
 .feature-container {
@@ -202,6 +220,8 @@ a:active {
 
     width: 400px;
     height: 256px;
+
+    line-height: 21px;
 }
 
 .feature h3 {
@@ -210,6 +230,10 @@ a:active {
 
 .feature p {
     width: 300px;
+}
+
+.suggestions {
+    line-height: 21px;
 }
 
 .suggestions li {
@@ -247,30 +271,35 @@ a:active {
     line-height: 24px;
 }
 
-.search-hotel .button {
+.search-hotel .button-brown {
     width: 568px;
     height: 86px;
-
-    font-size: 21px;
-    line-height: 26px;
 }
 
 .form-search-hotel {
+    line-height: 26px;
     font-weight: bold;
     color: #000000;
     padding: 55px;
 }
 
-
 .form-search-hotel .area {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.form-search-hotel label {
+    vertical-align: middle;
 }
 
 .form-search-hotel input,
 .form-search-hotel .button-grey {
     height: 38px;
+ 
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+ 
     vertical-align: middle;
-    font-weight: bold;
     background-color: #f2f2f2;
 }
 
@@ -343,9 +372,20 @@ a:active {
     height: 58px;
 }
 
+/*===================================================================*/
+/*===================================================================*/
+/*===================================================================*/
+
+.main-hotels h1,
+.main-hotels h2,
+.main-hotels h3 {
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;
+}
+
 .filter {
-    font-size: 14px;
-    line-height: 21px;
     color: #ffffff;
     background-color: #81b3d2;
     background-image: url('../img/filter-background.jpg');
@@ -353,15 +393,20 @@ a:active {
 
 .filter legend {
     font-size: 16px;
-    line-height: 21px;
     font-weight: bold;
+}
+
+.filter input {
+    font-size: inherit;
+    line-height: inherit;
 }
 
 .filter .button {
     width: 133px;
     height: 32px;
 
-    line-height: 21px;
+    font-size: inherit;
+    line-height: inherit;
     font-weight: normal;
     color: #ffffff;
     background-color: transparent;
@@ -369,24 +414,23 @@ a:active {
 }
 
 .filter .button:hover,
-.filter .button:focus
- {
+.filter .button:focus {
     color: #000000;
     background-color: #ffffff;
 }
 
-.filter .checkbox {
-    opacity: 0;
-}
-
-.facilities ul,
-.types-accomodation ul {
+.filter {
     padding-left: 5px;
 }
 
-.facilities li,
-.types-accomodation li {
+.filter li {
+    margin-bottom: 20px;
     list-style: none;
+}
+
+.filter label {
+    display: inline-block;
+    height: 23px;
 }
 
 .facilities label::before,
@@ -394,7 +438,7 @@ a:active {
     display: inline-block;
     
     width: 30px;
-    height: 30px;
+    height: 23px;
     vertical-align: middle;
     padding-left: 5px;
  
@@ -407,8 +451,9 @@ a:active {
     background: url('../img/checkbox-on.svg') no-repeat;
 }
 
-.filter input:focus + label::before {
-    background-color: #81b3d2;
+.filter input:focus + label {
+    outline: 1px solid #ffffff;
+    outline-offset: 3px;
 }
 
 .sort-type,
@@ -476,6 +521,10 @@ a:active {
     color: #81b3d2;
 }
 
+.hotels-found h3 {
+    font-weight: normal;
+}
+
 .hotels li {
     list-style: none;
 }
@@ -498,7 +547,14 @@ a:active {
 }
 
 .hotel .button {
+    font-size: inherit;
+    line-height: inherit;
     padding: 5px 18px;
+}
+
+.hashtag {
+    font-size: 21px;
+    line-height: 26px;
 }
 
 .socials li {
@@ -523,6 +579,10 @@ a:active {
 
 .created-by a {
     vertical-align: middle;
+}
+
+.created-by {
+    line-height: 26px;
 }
 
 .htmlacademy {
