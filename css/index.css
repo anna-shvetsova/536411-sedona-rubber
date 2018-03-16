@@ -34,7 +34,8 @@ a:focus {
 }
 
 a:active {
-    color: #b2b2b2;
+    color: #000000;
+    opacity: 0.3;
 }  
 
 .header-hidden {
@@ -79,7 +80,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-blue:active {
-    color: #928a85;
+    opacity: 0.3;
     background-color: #5496bd;
 }
 
@@ -95,7 +96,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-brown:active {
-    color: #928a85;
+    opacity: 0.3;
     background-color: #503e33;
 }
 
@@ -169,6 +170,7 @@ input[type="radio"].visually-hidden {
     background-color: #81b3d2;
     background-image: url("../img/intro.jpg");
     background-position-y: -56px;
+    margin-bottom: 58px;
 }
 
 .intro {
@@ -182,6 +184,7 @@ input[type="radio"].visually-hidden {
 }
 
 .reasons-to-go  {
+    margin-top: 28px;
     text-align: center;
  /*   border: 1px solid black;
     */
@@ -189,11 +192,14 @@ input[type="radio"].visually-hidden {
 
 .reasons-to-go .subheader {
     line-height: 26px;
+    margin-bottom: 49px;
 }
 
 .feature-container {
     display: flex;
     flex-direction: row;
+
+    height: 256px;
 
     color: #ffffff;
     background-color: #81b3d2;
@@ -213,26 +219,33 @@ input[type="radio"].visually-hidden {
 }
 
 .feature {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     width: 400px;
-    height: 256px;
+    min-height: 256px;
 
+    padding: 25px 47px;
+ 
     line-height: 21px;
 }
 
-.feature h3 {
-    width: 140px;
+.two-lines {
+    width: 151px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .feature p {
-    width: 300px;
+    display: inline-block;
+    margin-top: 5px;
 }
 
 .suggestions {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.suggestions h3 {
     line-height: 21px;
 }
 
@@ -240,9 +253,58 @@ input[type="radio"].visually-hidden {
     list-style: none;
 }
 
+.advice {
+    width: 400px;
+    min-height: 330px;
+    padding-top: 55px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.advice::before {
+    display: inline-block;
+    width: 75px;
+    height: 80px;
+
+    content: '';
+
+    background-repeat: no-repeat;
+}
+
+.advice h3 {
+    margin-top: 22px;
+} 
+
+.accomodation::before {
+    background-image: url("../img/icon-1.svg"); 
+    background-position-y: 5px;
+}
+
+.food::before {
+    background-image: url("../img/icon-3.svg"); 
+    background-position-y: 5px;
+}
+
+.souvenirs::before {
+    background-image: url("../img/icon-2.svg"); 
+    background-position-x: 5px;
+}
+
+.features-container {
+    display: flex;
+}
+
+.features-container h3 {
+    line-height: 21px;
+}
+
+.features-container .feature {
+    padding: 25px 60px;
+}
+
 .picture {
     width: 800px;
-    height: 260px;
+    min-height: 256px;
     overflow: hidden;
 }
 
@@ -470,7 +532,8 @@ input[type="radio"].visually-hidden {
 .sort-type a {
     font-size: 12px;
     line-height: 18px;
-    color: #b2b2b2;
+    color: #000000;
+    opacity: 0.3;
     text-decoration: underline dotted;
 }
 
@@ -508,7 +571,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-direction a {
-    color: #b2b2b2;
+    color: #cacaca;
 }
 
 .sort-direction a:hover,
@@ -542,6 +605,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel .rate {
+    color: #666666;
     text-align: center;
     vertical-align: middle;
 }
@@ -574,7 +638,7 @@ input[type="radio"].visually-hidden {
 }
 
 .social:active .svg-icon {
-    fill: #88b6d1;
+    fill-opacity: 0.3;
 }
 
 .created-by a {
