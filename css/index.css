@@ -531,11 +531,6 @@ input[type="radio"].visually-hidden {
     height: 23px;
 }
 
-.filter input {
-    font-size: inherit;
-    line-height: inherit;
-}
-
 .facilities label::before,
 .types-accomodation label::before {
     display: inline-block;
@@ -565,6 +560,107 @@ input[type="radio"].visually-hidden {
     margin-left: auto;
 }
 
+.range-price legend {
+    margin-bottom: 9px;
+}
+
+.filter .area-input {
+    position: relative;
+  
+    width: 317px;
+    height: 36px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+  
+/*    font-size: 0;
+*/  
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.area-input::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    width: 2px;
+    height: 22px;
+  
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.area-input label {
+    display: inline-block;
+
+    width: 80px;
+    margin-left: 64px;
+  
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: top;
+  
+    cursor: pointer;
+}
+
+.area-input input {
+    width: 50px;
+    margin: 0;
+  
+    color: inherit;
+    font: inherit;
+  
+    background: none;
+    border: none;
+}
+
+.area-scale {
+    position: relative;
+  
+    margin-bottom: 32px;
+}
+  
+.area-scale .scale {
+    height: 2px;
+  
+    background: rgba(255, 255, 255, 0.3);
+}
+  
+.area-scale .bar {
+    width: 80%;
+    height: 2px;
+  
+    background: #ffffff;
+}
+  
+.range-toggle {
+    box-sizing: content-box;
+
+    position: absolute;
+    top: -9px;
+  
+    width: 4px;
+    height: 4px;
+  
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+.range-toggle:hover {
+    background: #1c4f80;
+}
+  
+.range-toggle-min {
+    left: 0;
+}
+  
+.range-toggle-max {
+    left: 80%;
+}
+
 .filter .button {
     margin-top: auto;
     margin-bottom: 4px;
@@ -581,6 +677,7 @@ input[type="radio"].visually-hidden {
     color: #ffffff;
     background-color: transparent;
     border: 2px solid #ffffff;
+    border-radius: 2px;
 }
 
 .filter .button:hover,
@@ -694,9 +791,9 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels li {
+    list-style: none;
     padding-top: 26px;
     padding-bottom: 30px;
-    list-style: none;
 }
 
 .hotel {
@@ -724,14 +821,11 @@ input[type="radio"].visually-hidden {
 
 .column-2 p {
     display: inline-block;
-}
-
-.row-2 p {
     width: 113px;
 }
 
-.row-3 {
-    margin-top: auto;
+.column-2 .button-blue {
+    margin-right: 2px;
 }
 
 .hotel .column-3 {
@@ -768,7 +862,7 @@ input[type="radio"].visually-hidden {
 .hotel .button {
     font-size: inherit;
     line-height: inherit;
-    padding: 5px 18px;
+    padding: 5px 17px;
 }
 
 footer {
@@ -835,6 +929,7 @@ footer .hashtag {
 
     width: 115px;
     height: 41px;
+
 }
 
 .htmlacademy .svg-icon {
