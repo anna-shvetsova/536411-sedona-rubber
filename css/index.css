@@ -168,9 +168,10 @@ input[type="radio"].visually-hidden {
 
 .picture-big {
     height: 510px;
-    background-color: #81b3d2;
-    background-image: url("../img/intro.jpg");
-    background-position-y: -56px;
+    background-color: none, #81b3d2;
+    background-image: url("../img/shape.png"), url("../img/intro.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position-y: bottom, -56px;
     margin-bottom: 58px;
 }
 
