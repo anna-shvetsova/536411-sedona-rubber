@@ -14,10 +14,12 @@ body {
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 14px;
     line-height: 21px;
-    text-transform: uppercase;
     color: #333333;
 
     background-color:#f2f2f2;
+
+    text-transform: uppercase;
+    overflow-wrap: break-word;
 }
 
 
@@ -243,6 +245,7 @@ input[type="radio"].visually-hidden {
 
 .suggestions {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
@@ -296,6 +299,7 @@ input[type="radio"].visually-hidden {
 
 .features-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .features-container .feature {
@@ -381,6 +385,7 @@ input[type="radio"].visually-hidden {
 
 .form-search-hotel .row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 24px;
 }
@@ -650,11 +655,11 @@ input[type="radio"].visually-hidden {
     background: #ababab;
     border: 8px solid #ffffff;
     border-radius: 50%;
+    box-shadow: 0 2px 2px 0 rgba(171,171,171,0.3);
     cursor: pointer;
 }
   
 .range-toggle:hover {
-    background: #1c4f80;
     border-width: 9px;
 }
   
@@ -702,7 +707,6 @@ input[type="radio"].visually-hidden {
 
 .sort-panel {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     min-height: 87px;
     padding: 0 72px;
@@ -711,10 +715,12 @@ input[type="radio"].visually-hidden {
 
 .sort-panel h2 {
     width: 164px;
+    flex-shrink: 0;
 }
 
 .sort-panel h3 {
     width: 115px;
+    flex-shrink: 0;
 }
 
 .sort-panel ul {
@@ -728,6 +734,7 @@ input[type="radio"].visually-hidden {
 .sort-type,
 .sort-direction {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
 }
 
@@ -817,16 +824,18 @@ input[type="radio"].visually-hidden {
 }
 
 .column-2 .row-1 {
+    width: 750px;
     margin-bottom: 6px;
 }
 
 .column-2 .row-2 {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .column-2 p {
     display: inline-block;
     width: 113px;
+    vertical-align: top;
 }
 
 .column-2 .button-blue {
@@ -855,6 +864,7 @@ input[type="radio"].visually-hidden {
     margin-bottom: auto;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     font-size: 24px;
     color: #81b3d2;
@@ -865,9 +875,11 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel .button {
+    display: inline-block;
+    max-width: 350px;
     font-size: inherit;
     line-height: inherit;
-    padding: 5px 17px;
+    padding: 3px 17px;
 }
 
 footer {
