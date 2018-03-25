@@ -720,9 +720,7 @@ input[type="radio"].visually-hidden {
 .sort-panel {
     display: flex;
     align-items: center;
-    padding: 0 72px;
-    padding-top: 19px;
-    padding-bottom: 18px;
+    padding: 30px 72px;
     border-bottom: 1px solid #e5e5e5; 
 }
 
@@ -736,10 +734,6 @@ input[type="radio"].visually-hidden {
     flex-shrink: 0;
 }
 
-.sort-panel ul {
-    padding: 0;
-}
-
 .sort-panel li {
     width: 80px;
 }
@@ -749,6 +743,8 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .sort-direction {
