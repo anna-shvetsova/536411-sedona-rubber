@@ -22,22 +22,9 @@ body {
     overflow-wrap: break-word;
 }
 
-
 a {
-    line-height: 26px;
     text-decoration: none;
-    color: #000000;
 }
-
-a:hover,
-a:focus {
-    color: #81b3d2;
-    outline: 0;
-}
-
-a:active {
-    color: rgba(0,0,0,0.3);
-}  
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -165,7 +152,23 @@ input[type="radio"].visually-hidden {
     text-align: right;
 }
 
-.top-menu-current a {
+.top-menu a {
+    line-height: 26px;
+    color: #000000;
+}
+
+.top-menu a:hover,
+.top-menu a:focus {
+    color: #81b3d2;
+    outline: 0;
+}
+
+.top-menu a:active {
+    color: rgba(0,0,0,0.3);
+}  
+
+.top-menu-current a,
+.top-menu-current a:hover {
     color: #766357;    
 }
 
@@ -517,7 +520,6 @@ input[type="radio"].visually-hidden {
 .filter fieldset {
     padding: 0;
     margin: 0;
-    width: 255px;
     border: none;
 }
 
@@ -539,6 +541,11 @@ input[type="radio"].visually-hidden {
 .filter label {
     display: inline-block;
     height: 23px;
+}
+
+.facilities,
+.types-accomodation {
+    width: 255px;
 }
 
 .facilities label::before,
@@ -659,10 +666,15 @@ input[type="radio"].visually-hidden {
     cursor: pointer;
 }
   
-.range-toggle:hover {
+.range-toggle:hover,
+.range-toggle:focus {
     border-width: 9px;
 }
-  
+
+.range-toggle:focus {
+    outline: none;
+}    
+
 .range-toggle-min {
     left: 0;
 }
@@ -708,8 +720,9 @@ input[type="radio"].visually-hidden {
 .sort-panel {
     display: flex;
     align-items: center;
-    min-height: 87px;
     padding: 0 72px;
+    padding-top: 19px;
+    padding-bottom: 18px;
     border-bottom: 1px solid #e5e5e5; 
 }
 
@@ -764,6 +777,10 @@ input[type="radio"].visually-hidden {
     color: #81b3d2;
 }
 
+.sort-type a:focus {
+    outline: none;
+}
+
 .sort-type a:active {
     color: #000000;
 }
@@ -773,26 +790,22 @@ input[type="radio"].visually-hidden {
     text-decoration: none;
 }
 
-.sort-direction .up a::before {
-    background: url(../img/icon-up-dir.svg) no-repeat;
-}
-
-.sort-direction .down a::before {
-    background: url(../img/icon-down-dir.svg) no-repeat;
-}
-
 .sort-direction a {
-    color: #cacaca;
+    fill: #cacaca;
 }
 
 .sort-direction a:hover,
 .sort-direction a:focus {
-    color: #000000;
+    fill: #000000;
+}
+
+.sort-direction a:focus {
+    outline: none;
 }
 
 .sort-direction a:active,
 .sort-direction-current a {
-    color: #81b3d2;
+    fill: #81b3d2;
 }
 
 .hotels-found h3 {
@@ -813,6 +826,24 @@ input[type="radio"].visually-hidden {
     list-style: none;
     border-bottom: 1px solid #e5e5e5; 
 }
+
+.hotel .name-hotel {
+    color: #000000;
+}
+
+.hotel .name-hotel:hover,
+.hotel .name-hotel:focus {
+    color: #81b3d2;
+}
+
+.hotel .name-hotel:focus {
+    outline: 0;
+}
+
+.hotel .name-hotel:active {
+    color: rgba(0,0,0,0.3);
+}
+
 
 .hotel p {
     margin: 0;
@@ -845,6 +876,7 @@ input[type="radio"].visually-hidden {
 .hotel .column-3 {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 
     margin-left: auto;
 }
@@ -861,17 +893,20 @@ input[type="radio"].visually-hidden {
 }
 
 .column-3 .stars {
+    width: 93px;
+    height: 17px;
+    margin-top: 3px;
     margin-bottom: auto;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    font-size: 24px;
-    color: #81b3d2;
+    background: url('../img/star.svg') repeat-x;
 }
 
-.stars p {
-    margin-left: 4px;
+.hotel:nth-child(2) .stars {
+    width: 69px;
+}
+
+.hotel:nth-child(3) .stars {
+    width: 45px;
 }
 
 .hotel .button {
@@ -884,9 +919,10 @@ input[type="radio"].visually-hidden {
 
 footer {
     width: 100%;
+    padding-top: 36px;
+    padding-bottom: 36px;
     display: flex;
     justify-content: space-around;
-    min-height: 120px;
     background-color: rgba(254,254,254,0.9);
 }
 
@@ -925,7 +961,7 @@ footer .hashtag {
 }
 
 .social {
-    display: inline-block;
+    display: block;
     position: relative;
     
     width: 46px;
@@ -948,6 +984,11 @@ footer .hashtag {
     line-height: 26px;
 }
 
+.created-by p {
+    margin: 0;
+    padding: 0;
+}    
+
 .htmlacademy {
     display: inline-block;
     position: relative;
@@ -955,6 +996,10 @@ footer .hashtag {
     width: 115px;
     height: 41px;
 
+}
+
+.htmlacademy:focus {
+    outline: none;
 }
 
 .htmlacademy .svg-icon {
