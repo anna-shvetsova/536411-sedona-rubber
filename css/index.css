@@ -384,20 +384,8 @@ input[type="radio"].visually-hidden {
 }
 
 @keyframes showing {
-   
     0% {opacity: 0};
     100% {opacity: 1};
-
-    /*
-    0% {    
-        left: 50%;
-        transform: translate(-50%,-100%);
-    };
-    100% {    
-        left: 50%;
-        transform: translate(-50%,0)
-    };
-    */
 }
 
 .form-search-hotel-show {
@@ -512,6 +500,10 @@ input[type="radio"].visually-hidden {
 .form-search-hotel .button-blue {
     width: 100%;
     padding: 16px;
+}
+
+.form-search-hotel .field-empty {
+    border: 1px solid red;
 }
 
 /*===================================================================*/

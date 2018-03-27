@@ -107,25 +107,25 @@
         <form class="form-search-hotel" action=# method="POST">
           <div class="area area-date">
             <label for="date-checkin">Дата заезда:</label>
-            <input class="date" type="text" name="date-checkin" id="date-checkin" value="24 апреля 2017">
+            <input class="date" type="text" name="date-checkin" id="date-checkin" value="24 апреля 2017" required>
             <button class="button button-grey calendar" type="button"><span class="visually-hidden">Календарь для выбора даты</span></button>
           </div>
           <div class="area area-date">
             <label for="date-checkout">Дата выезда:</label>
-            <input class="date" type="text" name="date-checkout" id="date-checkout" value="4 июля 2017">
+            <input class="date" type="text" name="date-checkout" id="date-checkout" value="4 июля 2017" required>
             <button class="button button-grey calendar" type="button"><span class="visually-hidden">Календарь для выбора даты</span></button>
           </div>
           <div class="row">
             <div class="area">
               <label for="number-adults">Взрослые:</label>
               <button class="button button-grey decr" type="button" aria-label="Уменьшить количество">&mdash;</button>
-              <input class="number" type="text" name="number-adults" id="number-adults" value="2">
+              <input class="number" type="text" name="number-adults" id="number-adults" required>
               <button class="button button-grey incr" type="button" aria-label="Увеличить количество">&#10010;</button>
             </div>
             <div class="area">
               <label class="label-children" for="number-children">Дети:</label>
               <button class="button button-grey decr" type="button" aria-label="Уменьшить количество">&mdash;</button>
-              <input class="number" type="text" name="number-children" id="number-children" value="0">
+              <input class="number" type="text" name="number-children" id="number-children">
               <button class="button button-grey incr" type="button" aria-label="Увеличить количество">&#10010;</button>
             </div>
           </div>
