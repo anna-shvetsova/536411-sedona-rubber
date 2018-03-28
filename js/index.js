@@ -29,12 +29,13 @@ button.addEventListener('click', function (evt) {
         }
         
         if (isStorageAvailable) {
-            numberAdults.value = localStorage.getItem('numberAdults');
-            numberChildren.value = localStorage.getItem('numberChildren');
-        }
-        else {
-            numberAdults.value = '2';
-            numberChildren.value = '0';
+            var val;
+
+            val = localStorage.getItem('numberAdults');
+            numberAdults.value = (val !== null && val.trim().length !== 0) ? val : "2";
+
+            val = localStorage.getItem('numberChildren');
+            numberChildren.value = (val !== null && val.trim().length !== 0) ? val : "0";
         }
 
         modal.querySelector('[type = text]').focus();
