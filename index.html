@@ -6,7 +6,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/index-min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -104,7 +104,7 @@
                 <p>Укажите предполагаемые даты поездки,
                     <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
                 <button class="button button-brown" type="button">Поиск гостиницы в Седоне</button>
-                <form class="form-search-hotel" action="https://echo.htmlacademy.ru" method="POST">
+                <form class="form-search-hotel form-search-hotel-show" action="https://echo.htmlacademy.ru" method="POST">
                     <div class="area area-date">
                         <label for="date-checkin">Дата заезда:</label>
                         <input class="date" type="text" name="date-checkin" id="date-checkin" value="24 апреля 2017" required>
@@ -139,9 +139,9 @@
 
             <section class="picture-map">
                 <h2 class="visually-hidden">Как добраться</h2>
+                <img src="img/map.png" width="1200" height="593" alt="Большая карта">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838048.2243830574!2d-112.22378019149122!3d34.86562678007103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2ses!4v1522110583917"
                  width="1200" height="593" style="border:0" allowfullscreen></iframe>
-                <img src="img/map.png" width="1200" height="593" alt="Большая карта">
             </section>
 
         </main>
@@ -193,8 +193,10 @@
 
         </footer>
     </div>
-    <script src="js/index.js">
+    
+    <script src="js/index-min.js">
     </script>
+    
 </body>
 
 </html>
