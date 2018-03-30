@@ -29,8 +29,8 @@ a {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -185,7 +185,7 @@ input[type="radio"].visually-hidden {
 .picture-big {
     height: 510px;
     background-color: #81b3d2;
-    background-image: url("../img/shape.png"), url("../img/intro.jpg");
+    background-image: url('../img/shape.png'), url('../img/intro.jpg');
     background-repeat: no-repeat, no-repeat;
     background-position-y: bottom, -56px;
     margin-bottom: 58px;
@@ -306,17 +306,17 @@ input[type="radio"].visually-hidden {
 } 
 
 .accomodation::before {
-    background-image: url("../img/icon-1.svg"); 
+    background-image: url('../img/icon-1.svg'); 
     background-position-y: 5px;
 }
 
 .food::before {
-    background-image: url("../img/icon-3.svg"); 
+    background-image: url('../img/icon-3.svg'); 
     background-position-y: 5px;
 }
 
 .souvenirs::before {
-    background-image: url("../img/icon-2.svg"); 
+    background-image: url('../img/icon-2.svg'); 
     background-position-x: 5px;
 }
 
@@ -529,18 +529,18 @@ input[type="radio"].visually-hidden {
 }
 
 .form-search-hotel .calendar {
-    background-image: url("../img/calendar-grey.svg");
+    background-image: url('../img/calendar-grey.svg');
     background-repeat: no-repeat;
     background-position: 8px 8px;
 }
 
 .form-search-hotel .calendar:hover,
 .form-search-hotel .calendar:focus {
-    background-image: url("../img/calendar-black.svg");
+    background-image: url('../img/calendar-black.svg');
 }
 
 .form-search-hotel .calendar:active {
-    background-image: url("../img/calendar-blue.svg");
+    background-image: url('../img/calendar-blue.svg');
 }
 
 .form-search-hotel .incr:hover,
@@ -687,7 +687,7 @@ input[type="radio"].visually-hidden {
 }
 
 .area-input::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
