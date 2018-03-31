@@ -54,15 +54,14 @@ var buttonBlue = modal.querySelector('.button-blue');
 buttonBlue.addEventListener('click', function () {
     var arrRequired = modal.querySelectorAll('[required]');
     for (var i = 0; i < arrRequired.length; i++) {
-        if (arrRequired[i].value) {
-            if (arrRequired[i].classList.contains('field-empty')) {
-                arrRequired[i].classList.remove('field-empty');
-            }
+        if (arrRequired[i].classList.contains('field-empty')) {
+            arrRequired[i].classList.remove('field-empty');
         }
-        else {
-            if (!arrRequired[i].classList.contains('field-empty')) {
-                arrRequired[i].classList.add('field-empty');
-            }
+    }
+
+    for (var i = 0; i < arrRequired.length; i++) {
+        if (!arrRequired[i].value) {
+            arrRequired[i].classList.add('field-empty');
         }
     };
 });
