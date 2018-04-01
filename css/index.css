@@ -891,13 +891,12 @@ input[type='radio'].visually-hidden {
     font-size: 12px;
     line-height: 18px;
     color: rgba(0,0,0,0.3);
-    border-bottom: 1px dotted rgba(0,0,0,0.3);
+    border-bottom: 1px dotted #81b3d2;
 }
 
 .sort-type a:hover,
 .sort-type a:focus {
     color: #81b3d2;
-    border-bottom: 1px dotted #81b3d2;
 }
 
 .sort-type a:focus {
