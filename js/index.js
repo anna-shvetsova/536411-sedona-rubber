@@ -58,6 +58,7 @@ buttonBlue.addEventListener('click', function () {
             arrRequired[i].classList.remove('field-empty');
         }
     }
+    modal.offsetWidth = modal.offsetWidth;
 
     for (var i = 0; i < arrRequired.length; i++) {
         if (!arrRequired[i].value) {
