@@ -89,7 +89,8 @@ input[type='radio'].visually-hidden {
 
 .wrapper {
     position: relative;
-    width: 1200px;
+    max-width: 1200px;
+    min-width: 768px;
     margin: 0 auto;
 
     background-color: #ffffff;
@@ -137,7 +138,7 @@ input[type='radio'].visually-hidden {
 }
 
 .top-menu li {
-    width: 240px;
+    width: 20%; /*240px;*/
     padding-top: 14px;
     padding-bottom: 16px;
 
@@ -145,12 +146,12 @@ input[type='radio'].visually-hidden {
 }
 
 .top-menu li:nth-child(4n+1) {
-    margin-left: 72px;
+    margin-left: 6%; /*72px*/;
 }
 
 .top-menu li:last-child,
 .top-menu li:nth-child(4n) {
-    margin-right: 72px;
+    margin-right: 6%; /*72px;*/
 }
 
 .top-menu li:nth-child(4n-1) {
@@ -188,6 +189,7 @@ input[type='radio'].visually-hidden {
     background-image: url('../img/shape.png'), url('../img/intro.jpg');
     background-repeat: no-repeat, no-repeat;
     background-position-y: bottom, -56px;
+    background-position-x: center;
     margin-bottom: 58px;
 }
 
@@ -196,7 +198,7 @@ input[type='radio'].visually-hidden {
 }
 
 .intro h1 {
-    width: 600px;
+    width: 50%; /*600px;*/
     margin: auto;
 }
 
@@ -205,7 +207,7 @@ input[type='radio'].visually-hidden {
 }
 
 .reasons-to-go .subheader {
-    width: 600px;
+    width: 50%; /*600px;*/
     margin: 0 auto;
     line-height: 26px;
     margin-bottom: 51px;
@@ -214,8 +216,8 @@ input[type='radio'].visually-hidden {
 .main-index .two-lines {
     margin: 0;
     margin-bottom: 23px;
-    padding-left: 78px;
-    padding-right: 77px;
+    padding-left: 6.5%; /*78px;*/
+    padding-right: 6.5%; /*77px;*/
 
     line-height: 21px;
 }
@@ -248,8 +250,8 @@ input[type='radio'].visually-hidden {
 }
 
 .feature {
-    width: 400px;
-    padding: 48px 47px;
+    width: 33.3%; /*400px*/;
+    padding: 48px 4%; /*7.5%;*/ /*48px 47px;*/
     line-height: 21px;
 }
 
@@ -277,11 +279,11 @@ input[type='radio'].visually-hidden {
 }
 
 .advice {
-    width: 400px;
+    width: 33.3%; /*400px;*/
     padding-top: 55px;
     padding-bottom: 82px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 8%; /*50px;*/
+    padding-right: 8%; /*50px;*/
 }
 
 .advice::before {
@@ -337,7 +339,7 @@ input[type='radio'].visually-hidden {
 
 .picture {
     position: relative;
-    width: 800px;
+    width: 66.6%; /*800px;*/
     min-height: 256px;
     overflow: hidden;
 }
@@ -380,7 +382,7 @@ input[type='radio'].visually-hidden {
 
 .search-hotel b {
     display: block;
-    width: 600px;
+    width: 50%; /*600px;*/
     margin: auto;
     margin-bottom: 24px;
 
@@ -391,7 +393,7 @@ input[type='radio'].visually-hidden {
 
 .search-hotel p {
     display: block;
-    width: 600px;
+    width: 50%; /*600px;*/
     margin: 0 auto;
     margin-bottom: 48px;
     line-height: 24px;
@@ -600,7 +602,7 @@ input[type='radio'].visually-hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 28px 72px;
+    padding: 28px 6%; /*28px 72px;*/ 
 
     color: #ffffff;
     background-color: #81b3d2;
@@ -945,8 +947,8 @@ input[type='radio'].visually-hidden {
     display: flex;
     padding-top: 26px;
     padding-bottom: 29px;
-    padding-left: 72px;
-    padding-right: 72px;
+    padding-left: 6%; /*72px;*/
+    padding-right: 6%; /*72px;*/
   
     list-style: none;
     border-bottom: 1px solid #e5e5e5; 
@@ -980,7 +982,7 @@ input[type='radio'].visually-hidden {
 }
 
 .column-2 .row-1 {
-    width: 750px;
+    /*width: 750px;*/
     margin-bottom: 6px;
 }
 
@@ -1080,7 +1082,7 @@ footer .column {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 400px;
+    width: 33.3% /*400px;*/
 }
 
 footer .hashtag {
